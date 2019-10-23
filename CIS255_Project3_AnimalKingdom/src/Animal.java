@@ -1,6 +1,3 @@
-/* ADD EQUALS AND IMPLEMENT COMPARABLE */
-/* MAKE NO OTHER CHANGES TO THIS FILE */
-
 public abstract class Animal implements Comparable<Animal>{
 
 	private int id;
