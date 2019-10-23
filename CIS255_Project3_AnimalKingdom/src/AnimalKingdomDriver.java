@@ -20,8 +20,6 @@ public class AnimalKingdomDriver {
 		animalList.add(new Horse(13, "Mr. Ed the Fourth", BirthType.LIVE_BIRTH));
 
 		Collections.sort(animalList);
-		// note the code won't compile until you implement Comparable!
-		// if you want to test before that, comment out the sorting line
 
 		System.out.println("***TEST ALL ANIMALS AND COMPARABLE IMPLEMENTATION");
 		System.out.println("Should print 13 animals, ordered in alphabetic order by name:\n");
