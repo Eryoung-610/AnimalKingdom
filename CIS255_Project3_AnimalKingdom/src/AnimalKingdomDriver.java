@@ -18,6 +18,7 @@ public class AnimalKingdomDriver {
 		animalList.add(new DuckBilledPlatypus(11, "Donald Duck E. Platt", BirthType.LAYS_EGGS));
 		animalList.add(new Horse(12, "Horsey McHorseface", BirthType.LIVE_BIRTH));
 		animalList.add(new Horse(13, "Mr. Ed the Fourth", BirthType.LIVE_BIRTH));
+		animalList.add(new BengalTiger(14, "Tony the Tiger", BirthType.LIVE_BIRTH));
 
 		Collections.sort(animalList);
 
@@ -30,7 +31,7 @@ public class AnimalKingdomDriver {
 		System.out.println("\n\n******TEST WARM/COLD BLOODED");
 		System.out.println("All warm blooded animals. Should print: ");
 		System.out.println(
-				"BabyBeluga O\'BabyBeluga   Cali Condor the Great   Donald Duck E. Platt   Head in the Sand Hallie   Horsey McHorseface   Mr. Ed the Fourth   Never Irrelephant   Pretty Bird Pretty   Spouty the Blue Whale   Tweety Parakeety");
+				"BabyBeluga O\'BabyBeluga   Cali Condor the Great   Donald Duck E. Platt   Head in the Sand Hallie   Horsey McHorseface   Mr. Ed the Fourth   Never Irrelephant   Pretty Bird Pretty   Spouty the Blue Whale   Tony the Tiger  Tweety Parakeety");
 		for (Animal animal : animalList) {
 			if (animal.isWarmBlooded()) {
 				System.out.print(animal.getName() + "   ");
@@ -50,7 +51,7 @@ public class AnimalKingdomDriver {
 		System.out.println("\n\n******TEST BIRTH TYPE");
 		System.out.println("All live birth animals. Should print: ");
 		System.out.println(
-				"BabyBeluga O\'BabyBeluga   Horsey McHorseface   Mr. Ed the Fourth   Never Irrelephant   Spouty the Blue Whale   Toothy the Shark   ");
+				"BabyBeluga O\'BabyBeluga   Horsey McHorseface   Mr. Ed the Fourth   Never Irrelephant   Spouty the Blue Whale  Tony the Tiger   Toothy the Shark");
 		for (Animal animal : animalList) {
 			if (animal.hasLiveBirth()) {
 				System.out.print(animal.getName() + "   ");
@@ -101,13 +102,13 @@ public class AnimalKingdomDriver {
 						: "lives in the water and breathes water";
 				System.out.println(animal.getName() + water);
 			}
-			// YOUR CODE HERE
+			
 		}
 
 		System.out.println("\n\n******TEST ENDANGERED ANIMALS");
-		System.out.println("Should print 4 lines for Cali, Irrelephant, Spouty, and Toothy.\n");
+		System.out.println("Should print 5 lines for Cali, Irrelephant, Spouty, Tony and Toothy.\n");
 		for (Animal animal : animalList) {
-			// YOUR CODE HERE
+			
 			if (animal instanceof Endangered) {
 				Endangered endangered = (Endangered) animal;
 				endangered.printConservationInformation();
