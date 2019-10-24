@@ -1,3 +1,6 @@
+/* ADD EQUALS AND IMPLEMENT COMPARABLE */
+/* MAKE NO OTHER CHANGES TO THIS FILE */
+
 public abstract class Animal implements Comparable<Animal>{
 
 	private int id;
@@ -41,29 +44,15 @@ public abstract class Animal implements Comparable<Animal>{
 				getDescription();
 	}
 	
-	public boolean contains(Object obj) {
-		if (obj instanceof Animal) {
-			Animal otherAnimal = (Animal) obj;
-			boolean sameName, sameID;
-			
-			if(this.getName().equalsIgnoreCase(otherAnimal.getName())) {
-				sameName = true;
-			} else {
-				sameName = false;
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Animal) {
+			Animal other = (Animal) obj;
+			if(this.name.equalsIgnoreCase(other.name) && (this.id == other.id)) {
+				return true;
 			}
-			
-			if(this.getId() == otherAnimal.getId()) {
-				sameID = true;
-			} else {
-				sameID = false;
-			}
-			
-			System.out.println("DEBUG\t\t\t " + sameName);
-			
-			return sameName && sameID;
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	@Override
