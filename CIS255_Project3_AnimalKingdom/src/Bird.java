@@ -1,5 +1,5 @@
 
-public class Bird extends Mammal implements Winged{
+public class Bird extends Animal implements Winged{
 
 	private static final BirthType DEFAULT_BIRD_BIRTHTYPE = BirthType.LAYS_EGGS;
 	
